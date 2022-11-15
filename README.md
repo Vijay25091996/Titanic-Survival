@@ -7,7 +7,7 @@ In this challenge, i build a predictive model that answers the question: “what
 
 The following features with total of 891 entries were provided in the train.csv i.e training set
  
- #   Columns
+ #   Columns/Features
  0   PassengerId  
  1   Survived  
  2   Pclass  
@@ -20,7 +20,7 @@ The following features with total of 891 entries were provided in the train.csv 
  9   Fare    
  10  Cabin      
  11  Embarked   
-![image](https://user-images.githubusercontent.com/26757681/201896786-ef5da32c-7c66-4c07-8586-bc5a67dd48dc.png)
+
 
  #   Data Cleaning
 And then blindly had a look on how whether any of the feature had any null values
