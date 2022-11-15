@@ -7,20 +7,20 @@ In this challenge, i build a predictive model that answers the question: “what
 
 The following features with total of 891 entries were provided in the train.csv i.e training set
  
- #   Column       Non-Null Count  Dtype  
----  ------       --------------  -----  
- 0   PassengerId  891 non-null    int64  
- 1   Survived     891 non-null    int64  
- 2   Pclass       891 non-null    int64  
- 3   Name         891 non-null    object 
- 4   Sex          891 non-null    object 
- 5   Age          714 non-null    float64
- 6   SibSp        891 non-null    int64  
- 7   Parch        891 non-null    int64  
- 8   Ticket       891 non-null    object 
- 9   Fare         891 non-null    float64
- 10  Cabin        204 non-null    object 
- 11  Embarked     889 non-null    object
+ #   Columns
+ 0   PassengerId  
+ 1   Survived  
+ 2   Pclass  
+ 3   Name    
+ 4   Sex     
+ 5   Age    
+ 6   SibSp   
+ 7   Parch    
+ 8   Ticket   
+ 9   Fare    
+ 10  Cabin      
+ 11  Embarked   
+![image](https://user-images.githubusercontent.com/26757681/201896786-ef5da32c-7c66-4c07-8586-bc5a67dd48dc.png)
 
 
 
@@ -38,7 +38,7 @@ Since 'Cabin' is the main issue here, i had to check whether it is of catergoric
   
 Then coming to "Age" , i did just plot a heat map wherein it correlated well with the feature "Pclass" which is the Passenger Class which has 3 categorical entries (1,2,3)
 
-So immediate plan that came to mind is to do boxplot for both of these, so that i can map the values accordingly 
+So immediate plan that came to mind is to do boxplot for both of these, so that i can map the values for the null "Age"s accordingly 
 For e.g:
   
   def agemap(x):
@@ -57,7 +57,7 @@ For e.g:
 train['Age']=train[['Age','Pclass']].apply(agemap,axis=1)
 
 
-Not just an example, it's the actaul code used. simple.
+Not just an example, it's the actual code used. simple.
 
 Then for any dataset to be fed into Machine Learning Model it should be numerised or one hot encoded.
 
@@ -78,26 +78,19 @@ test_size was taken as 30%
 
 ![image](https://user-images.githubusercontent.com/26757681/201892074-0d8c64b2-684f-41fe-8f22-52d4cf853d9e.png)
 
-  LGBM	Light Gradient Boosting
-  MNB	  Multinomial NB
-  XGB	  XGBoost
-  RF	  Random Forest
-  AB	  Ada Boost
-  GB	  Gradient Boosting
-  LOG	  Logistic Regression
-  SGD	  Stochastic gradient descent
-  DT	  Decision Trees
-![image](https://user-images.githubusercontent.com/26757681/201892134-cb2820c1-e866-4bc0-a6de-4130aeb0d3d0.png)
+ 
+![image](https://user-images.githubusercontent.com/26757681/201893899-bff827c2-d996-46f5-9202-77a42ef18f99.png)
 
+The top three that is  XGB,GB & RF were applied on the test dataset and submitted on Kaggle for scores 
 
- On plotting the heatmap for all the features  
+GB submission scored slightly better compared to the other two 
 
+Then did Hyper parameter tuning using Grid_Search_CV  on GB model then applied it on the test dataset and submitted on Kaggle for scores
+
+  Accuracy_score= 0.80143 
+  My best on Kaggle so far and ranking is 513/14613  that is top 4% of the total submissions on kaggle for this competiton
 
 
 
 
  
-
-
-My highest kaggle score as of now is 0.80143
-and ranking is 513/14613  that is top 4% of the total submissions on kaggle for this copmpetiton
