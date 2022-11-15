@@ -22,10 +22,7 @@ The following features with total of 891 entries were provided in the train.csv 
  11  Embarked   
 ![image](https://user-images.githubusercontent.com/26757681/201896786-ef5da32c-7c66-4c07-8586-bc5a67dd48dc.png)
 
-
-
-
-
+ #   Data Cleaning
 And then blindly had a look on how whether any of the feature had any null values
 
   Features: 'Age' & 'Cabin', 20% of 'Age' were null whereas 'Cabin' had around 77% which is huge
@@ -72,13 +69,13 @@ Feature 'Sex' which has 2 categorical entries ('M','F')
 
 both of them were one hot encoded with drop_first= True
 
-imported almost all the popular Classifier Algorithms
+#   Machine Learning (Training the model)
+Imported almost all the popular Classifier Algorithms
 
 test_size was taken as 30%
 
+The accuracy scores were computed as below
 ![image](https://user-images.githubusercontent.com/26757681/201892074-0d8c64b2-684f-41fe-8f22-52d4cf853d9e.png)
-
- 
 ![image](https://user-images.githubusercontent.com/26757681/201893899-bff827c2-d996-46f5-9202-77a42ef18f99.png)
 
 The top three that is  XGB,GB & RF were applied on the test dataset and submitted on Kaggle for scores 
