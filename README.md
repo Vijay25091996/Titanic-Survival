@@ -38,7 +38,9 @@ Then coming to "Age" , i did just plot a heat map wherein it correlated well wit
 So immediate plan that came to mind is to do boxplot for both of these, so that i can map the values for the null "Age"s accordingly 
 For e.g:
   
-![image](https://user-images.githubusercontent.com/26757681/201900010-8990c387-f61a-41b0-a898-4d860900ee1b.png)
+
+![image](https://user-images.githubusercontent.com/26757681/201900265-d7791012-7c59-4bda-98ae-4ed5824b6988.png)
+
 
 
 Not just an example, it's the actual code used. simple.
