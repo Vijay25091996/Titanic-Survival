@@ -38,20 +38,7 @@ Then coming to "Age" , i did just plot a heat map wherein it correlated well wit
 So immediate plan that came to mind is to do boxplot for both of these, so that i can map the values for the null "Age"s accordingly 
 For e.g:
   
-  def agemap(x):
-    age=x[0]
-    pclass=x[1]
-    if np.isnan(age):
-        if pclass ==1:
-            return 38
-        elif pclass==2:
-            return 29
-        else:
-            return 25
-    else:
-        return age
-    
-train['Age']=train[['Age','Pclass']].apply(agemap,axis=1)
+![image](https://user-images.githubusercontent.com/26757681/201900010-8990c387-f61a-41b0-a898-4d860900ee1b.png)
 
 
 Not just an example, it's the actual code used. simple.
