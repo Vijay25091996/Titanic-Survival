@@ -24,13 +24,13 @@ The following features with total of 891 entries were provided in the train.csv 
 
  #   Data Cleaning
 In this data cleaning process, the null values in the features 'Age' and 'Cabin' were checked. 20% of 'Age' was null and 'Cabin' had 77% null values. 'Cabin' was deleted as it had almost unique values and didn't provide any meaningful correlation.
-The feature 'Age' was found to be correlated with 'Pclass' using a heat map and was imputed using a boxplot based on 'Pclass'. The string valued features 'Name', 'Ticket', 'Embarked', and 'Sex' were one-hot encoded.
 
-
+The feature 'Age' was found to be correlated with 'Pclass' using a heat map and was imputed using a boxplot based on 'Pclass'.
 For e.g:
  
-
 ![image](https://user-images.githubusercontent.com/26757681/201900265-d7791012-7c59-4bda-98ae-4ed5824b6988.png)
+
+The string valued features 'Name', 'Ticket', 'Embarked', and 'Sex' were one-hot encoded.
 
 Feature 'Embarked' which has 3 categorical entries ('Q','S','C')
 Feature 'Sex' which has 2 categorical entries ('M','F')
