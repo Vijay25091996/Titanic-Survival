@@ -23,35 +23,14 @@ The following features with total of 891 entries were provided in the train.csv 
 
 
  #   Data Cleaning
-And then blindly had a look on how whether any of the feature had any null values
+In this data cleaning process, the null values in the features 'Age' and 'Cabin' were checked. 20% of 'Age' was null and 'Cabin' had 77% null values. 'Cabin' was deleted as it had almost unique values and didn't provide any meaningful correlation.
+The feature 'Age' was found to be correlated with 'Pclass' using a heat map and was imputed using a boxplot based on 'Pclass'. The string valued features 'Name', 'Ticket', 'Embarked', and 'Sex' were one-hot encoded.
 
-  Features: 'Age' & 'Cabin', 20% of 'Age' were null whereas 'Cabin' had around 77% which is huge
 
-Since 'Cabin' is the main issue here, i had to check whether it is of catergorical or continuous type
-
-  It was categorical but almost had unique values like for 80% of the dataset and rest were redundant entries.
-  
-  So it was meaningless and any correlation coming out of it also wouldn't make any sense hence 'Cabin' feature deleted.
-  
-Then coming to "Age" , i did just plot a heat map wherein it correlated well with the feature "Pclass" which is the Passenger Class which has 3 categorical entries (1,2,3)
-
-So immediate plan that came to mind is to do boxplot for both of these, so that i can map the values for the null "Age"s accordingly 
 For e.g:
-  
+ 
 
 ![image](https://user-images.githubusercontent.com/26757681/201900265-d7791012-7c59-4bda-98ae-4ed5824b6988.png)
-
-
-
-Not just an example, it's the actual code used. simple.
-
-Then for any dataset to be fed into Machine Learning Model it should be numerised or one hot encoded.
-
-And in this case we have the features "Name","Sex","Ticket","Embarked" which had string values.
-
-Out of these "Name" & "Ticket" are totally unique for each of the entries and not required since we can refer the entry by "PassengerId" feature
-
-Deleted "Name" & "Ticket"
 
 Feature 'Embarked' which has 3 categorical entries ('Q','S','C')
 Feature 'Sex' which has 2 categorical entries ('M','F')
